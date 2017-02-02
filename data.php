@@ -13,12 +13,8 @@ while($rows = mysqli_fetch_assoc($sel_run)){ ?>
 			<a class="btn btn-danger btn-xs">Delete</a>
 		</td>
 	</tr>
-
-
-
-
-
 <?php 
+	// this is a comment I'm making for purposes of version control 
 	$count++;
 }
  ?>
