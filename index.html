@@ -7,7 +7,19 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script>
 		function ajax(req) {
+
+			var name = document.getElementById('name').value;
+			var fee = document.getElementById('fee').value;
+			var subject = document.getElementById('subject').value;
+			if(req == undefined){
+
+				
+			}
+
+
+
 			var xhr = new XMLHttpRequest();
+			
 			xhr.onreadystatechange = function(){
 				if(xhr.readyState == 4 && xhr.status == 200){
 					document.getElementById('test').innerHTML = xhr.responseText;
@@ -26,7 +38,7 @@
 		</div>
 		<form class="form-horizontal" method="post">
 			<div class="form-group">
-				<label class="label-control col-md-2" for="name">Student Name</label>
+				<label class="label-control col-md-2" for="name" placeholder="Name">Student Name</label>
 					<div class="col-md-10">
 						<input type="text" id="name" class="form-control">
 					</div>
