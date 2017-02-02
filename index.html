@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>School Project</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script scr="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		function ajax(req) {
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4 && xhr.status == 200){
+					document.getElementById('test').innerHTML = xhr.responseText;
+				}
+			}
+			xhr.open('GET','data.php',true);
+			xhr.send();
+		}
+	</script>
+	
+</head>
+<body onload="ajax();">
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="text-center">What up stinky butt?</h1>
+		</div>
+		<form class="form-horizontal" method="post">
+			<div class="form-group">
+				<label class="label-control col-md-2" for="name">Student Name</label>
+					<div class="col-md-10">
+						<input type="text" id="name" class="form-control">
+					</div>
+			</div>
+			<div class="form-group">
+				<label class="label-control col-md-2" for="fee">Student Fee</label>
+					<div class="col-md-10">
+						<input type="number" id="fee" class="form-control">
+				 	</div>
+			</div>
+			<div class="form-group">
+				<label class="label-control col-md-2" for="subject">Student Subject</label>
+					<div class="col-md-10">
+						<select class="form-control" id="subject">
+							<option value="Chemistry"></option>
+							<option value="Math"></option>
+							<option value="Physics"></option>
+						</select>
+				 	</div>
+			</div>
+			<div class="form-group">
+					<div class="col-md-10 col-md-offset-2">
+						<button class="btn btn-success btn-block" onclick="ajax('ad')"> 
+							Add New Record
+						</button>
+				 	</div>
+			</div>
+		</form>
+		<h2 class="text-center">Student Record</h2>
+		<table class="table text-center">
+			<thead>
+				<tr class="success">
+					<td>S. No</td>
+					<td>Student Name</td>
+					<td>Student Fee</td>
+					<td>Student Subject</td>
+					<td>Action</td>
+				</tr>
+			</thead>
+			<tbody id="test">
+				<tr>
+					 <td>1</td>
+					 <td>Will</td>
+					 <td>669</td>
+					 <td>Programming</td>
+					 <td>
+					 	<a class="btn btn-success btn-xs">Edit</a>
+					 	<a class="btn btn-danger btn-xs">Delete</a>
+					 </td>
+				</tr>
+				<tr>
+					 <td>2</td>
+					 <td>Will</td>
+					 <td>420</td>
+					 <td>Coding</td>
+					 <td>
+					 	<a class="btn btn-success btn-xs">Edit</a>
+					 	<a class="btn btn-danger btn-xs">Delete</a>
+					 </td>
+				</tr>
+				<tr>
+					 <td>3</td>
+					 <td>Will</td>
+					 <td>4242</td>
+					 <td>Origins of Pac-Man</td>
+					 <td>
+					 	<a class="btn btn-success btn-xs">Edit</a>
+					 	<a class="btn btn-danger btn-xs">Delete</a>
+					 </td>
+				</tr>
+				<tr>
+					 <td>1</td>
+					 <td>Will</td>
+					 <td>Free</td>
+					 <td>Digital Nomadics</td>
+					 <td>
+					 	<a class="btn btn-success btn-xs">Edit</a>
+					 	<a class="btn btn-danger btn-xs">Delete</a>
+					 </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
