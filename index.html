@@ -7,19 +7,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script>
 		function ajax(req) {
-
-			var name = document.getElementById('name').value;
-			var fee = document.getElementById('fee').value;
-			var subject = document.getElementById('subject').value;
-			if(req == undefined){
-
-				
-			}
-
-
-
 			var xhr = new XMLHttpRequest();
-			
 			xhr.onreadystatechange = function(){
 				if(xhr.readyState == 4 && xhr.status == 200){
 					document.getElementById('test').innerHTML = xhr.responseText;
@@ -27,6 +15,11 @@
 			}
 			xhr.open('GET','data.php',true);
 			xhr.send();
+			// var name = document.getElementById('name').value;
+			// var fee = document.getElementById('fee').value;
+			// var subject = document.getElementById('subject').value;
+			// if(req == undefined){	
+			// }	
 		}
 	</script>
 	
@@ -79,46 +72,7 @@
 				</tr>
 			</thead>
 			<tbody id="test">
-				<tr>
-					 <td>1</td>
-					 <td>Will</td>
-					 <td>669</td>
-					 <td>Programming</td>
-					 <td>
-					 	<a class="btn btn-success btn-xs">Edit</a>
-					 	<a class="btn btn-danger btn-xs">Delete</a>
-					 </td>
-				</tr>
-				<tr>
-					 <td>2</td>
-					 <td>Will</td>
-					 <td>420</td>
-					 <td>Coding</td>
-					 <td>
-					 	<a class="btn btn-success btn-xs">Edit</a>
-					 	<a class="btn btn-danger btn-xs">Delete</a>
-					 </td>
-				</tr>
-				<tr>
-					 <td>3</td>
-					 <td>Will</td>
-					 <td>4242</td>
-					 <td>Origins of Pac-Man</td>
-					 <td>
-					 	<a class="btn btn-success btn-xs">Edit</a>
-					 	<a class="btn btn-danger btn-xs">Delete</a>
-					 </td>
-				</tr>
-				<tr>
-					 <td>1</td>
-					 <td>Will</td>
-					 <td>Free</td>
-					 <td>Digital Nomadics</td>
-					 <td>
-					 	<a class="btn btn-success btn-xs">Edit</a>
-					 	<a class="btn btn-danger btn-xs">Delete</a>
-					 </td>
-				</tr>
+				
 			</tbody>
 		</table>
 	</div>

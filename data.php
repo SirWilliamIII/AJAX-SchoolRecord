@@ -2,6 +2,7 @@
 include 'db.php';
 $sel = "SELECT * FROM student";
 $sel_run = mysqli_query($conn, $sel);
+$count = 1;
 while($rows = mysqli_fetch_assoc($sel_run)){ ?>
 	<tr>
 		<td><?php echo $count; ?></td>
@@ -14,7 +15,6 @@ while($rows = mysqli_fetch_assoc($sel_run)){ ?>
 		</td>
 	</tr>
 <?php 
-	// this is a comment I'm making for purposes of version control 
 	$count++;
 }
  ?>
