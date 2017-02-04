@@ -1,9 +1,10 @@
-<?php 
+<?php
 include 'db.php';
-$sel = "SELECT * FROM student";
+$sel = "SELECT * FROM student WHERE id=1";
 $sel_run = mysqli_query($conn, $sel);
 $count = 1;
-while($rows = mysqli_fetch_assoc($sel_run)){ ?>
+while($rows = mysqli_fetch_assoc($sel_run)){
+	?>
 	<tr>
 		<td><?php echo $count; ?></td>
 		<td><?php echo $rows['name']; ?></td>
@@ -14,11 +15,7 @@ while($rows = mysqli_fetch_assoc($sel_run)){ ?>
 			<a class="btn btn-danger btn-xs">Delete</a>
 		</td>
 	</tr>
-<?php 
+<?php
 	$count++;
 }
  ?>
-
-
-
-
